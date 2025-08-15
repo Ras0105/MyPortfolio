@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rasshi Ashish Srivastav — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portf.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <header>
+      <img src="rasshi2.jpg" alt="Rasshi Ashish Srivastav">
+      <h1>Rasshi Ashish Srivastav</h1>
+      <p class="subtitle">B.Tech. Information Technology — MMMUT, Gorakhpur</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a motivated and detail-oriented Information Technology undergraduate with a strong interest in coding, development, and problem solving. I am eager to learn, adapt, and contribute effectively to challenging and collaborative environments.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card-grid">
+        <div class="card"><strong>Technical Skills:</strong> Tailwind CSS, JavaScript, C, C++, Git/GitHub</div>
+        <div class="card"><strong>Tools:</strong> Canva, Adobe Express</div>
+        <div class="card"><strong>Soft Skills:</strong> Teamwork, Team Manangement, Problem-Solving, Time Management, Adaptability, Pressure Handling</div>
+        <div class="card"><strong>Interests:</strong> Cybersecurity, AI/ML</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <div class="card"><strong>My Personal Study Space</strong> — Personalized learning dashboard for students (HTML, CSS) — <a href="https://github.com/Ras0105/project" target="_blank">Code</a> | <a href="https://ras0105.github.io/project/project.html" target="_blank">Live</a></div>
+        <div class="card"><strong>HackBlitz'25 EdTech Platform</strong> — Interactive online learning platform (HTML, CSS, JS) — <a href="https://github.com/Ras0105/hackblitz" target="_blank">Code</a> | <a href="https://ras0105.github.io/hackblitz/home.html" target="_blank">Live</a></div>
+        <div class="card"><strong>Netflix Clone</strong> — Streaming service UI clone (HTML, CSS, JS) — <a href="https://github.com/Ras0105/Netflix-Clone" target="_blank">Code</a> | <a href="https://ras0105.github.io/Netflix-Clone/netflix.html" target="_blank">Live</a></div>
+        <div class="card"><strong>ByteBurst'25 Mess Management Tool</strong> — Mess Management Tool — <a href="https://github.com/Ras0105/ByteBurst-25" target="_blank">Code</a> | <a href="https://ras0105.github.io/ByteBurst-25/mess.html" target="_blank">Live</a></div>
+        <div class="card"><strong>Faulty Calculator</strong> — 50% faulty calculator — <a href="https://github.com/Ras0105/FaultyCal" target="_blank">Code</a> | <a href="https://ras0105.github.io/FaultyCal/FaultyCal.html" target="_blank">Live</a></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Executive Member</strong> — Drone & IoT Club, MMMUT Gorakhpur (Feb 2025 - Present)<br>
+        • Working on club website and IoT projects<br>
+        • Designed and delivered orientation presentation for 200+ freshers<br>
+        • Coordinated and guided 100+ students during events</li>
+        <li><strong>Member</strong> — Cultural Synod, Fine Arts Club (Feb 2025 - Present)<br>
+        • Worked in ABHYUDAYA'S team</li>
+        <li><strong>Volunteer</strong> — GDG's Orientation (Aug 2025)<br>
+        • Coordinated and guided 100+ new students during orientation</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech. IT</strong>, MMMUT, Gorakhpur (2024-2028)</li>
+        <li><strong>Intermediate</strong>, Aatmdeep Vidyalaya, Gorakhpur (2023)</li>
+        <li><strong>High School</strong>, St. Mary's Convent Carmel School, Gorakhpur (2020)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:smt29nov@gmail.com">smt29nov@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917275445980">+91-7275445980</a></p>
+      <p>Portfolio: <a href="https://ras0105.github.io/Portfolio/portf.html" target="_blank">ras0105.github.io/Portfolio</a></p>
+      <p>GitHub: <a href="https://github.com/Ras0105" target="_blank">github.com/Ras0105</a></p>
+    </section>
+  </div>
+<script>
+  
+  const sections = document.querySelectorAll('section');//select all the sections, nodelist/array elements ki tarah list deta hais ections ki
+
+  function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;//85% of vh deta hai
+//when a section’s top crosses above this line, it will be revealed.
+    sections.forEach(section => {//sections ke andar ke saare elements ko visit karta hai
+      if (section.getBoundingClientRect().top < trigger) {
+        section.classList.add('visible');
+      }
+      //section.getBoundingClientRect().top is the Distance from the top of the viewport to the top of the section.
+      //If this value is less than the trigger line, it means the section has moved far enough into view to be revealed.
+    });
+  }
+
+  /*top se 85% of vh ek line hai, agar use cross karega to visible hoga,
+  i.e. agar section ke top ki height top se 85% wali height se choti hai tab
+  that means usne cross kar liya hai to use iss condition ko check karke visible bana denge*/
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // run once on load
+</script>
+
+</body>
+</html>
+
+<!--getBoundingClientRect() JavaScript ka built-in DOM method hai jo tumhe kisi element ka size aur uski position deta hai viewport ke respect me.-->
