@@ -36,7 +36,7 @@
       <div class="card-grid">
         <div class="card"><strong>Technical Skills:</strong> Tailwind CSS, JavaScript, C, C++, Git/GitHub</div>
         <div class="card"><strong>Tools:</strong> Canva, Adobe Express</div>
-        <div class="card"><strong>Soft Skills:</strong> Teamwork, Team Manangement, Problem-Solving, Time Management, Adaptability, Pressure Handling</div>
+        <div class="card"><strong>Soft Skills:</strong> Teamwork, Team Management, Problem-Solving, Time Management, Adaptability, Pressure Handling</div>
         <div class="card"><strong>Interests:</strong> Cybersecurity, AI/ML</div>
       </div>
     </section>
@@ -49,6 +49,7 @@
         <div class="card"><strong>Netflix Clone</strong> — Streaming service UI clone (HTML, CSS, JS) — <a href="https://github.com/Ras0105/Netflix-Clone" target="_blank">Code</a> | <a href="https://ras0105.github.io/Netflix-Clone/netflix.html" target="_blank">Live</a></div>
         <div class="card"><strong>ByteBurst'25 Mess Management Tool</strong> — Mess Management Tool — <a href="https://github.com/Ras0105/ByteBurst-25" target="_blank">Code</a> | <a href="https://ras0105.github.io/ByteBurst-25/mess.html" target="_blank">Live</a></div>
         <div class="card"><strong>Faulty Calculator</strong> — 50% faulty calculator — <a href="https://github.com/Ras0105/FaultyCal" target="_blank">Code</a> | <a href="https://ras0105.github.io/FaultyCal/FaultyCal.html" target="_blank">Live</a></div>
+        <div class="card"><strong>My Portfolio</strong> — Personal portfolio site — <a href="https://github.com/Ras0105/Portfolio" target="_blank">Code</a> | <a href="https://ras0105.github.io/Portfolio/port.html" target="_blank">Live</a></div>
       </div>
     </section>
 
@@ -79,35 +80,23 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:smt29nov@gmail.com">smt29nov@gmail.com</a></p>
       <p>Phone: <a href="tel:+917275445980">+91-7275445980</a></p>
-      <p>Portfolio: <a href="https://ras0105.github.io/Portfolio/portf.html" target="_blank">ras0105.github.io/Portfolio</a></p>
+      <p>Portfolio: <a href="https://ras0105.github.io/Portfolio/port.html" target="_blank">ras0105.github.io/Portfolio</a></p>
       <p>GitHub: <a href="https://github.com/Ras0105" target="_blank">github.com/Ras0105</a></p>
     </section>
   </div>
-<script>
-  
-  const sections = document.querySelectorAll('section');//select all the sections, nodelist/array elements ki tarah list deta hais ections ki
 
-  function revealOnScroll() {
-    const trigger = window.innerHeight * 0.85;//85% of vh deta hai
-//when a section’s top crosses above this line, it will be revealed.
-    sections.forEach(section => {//sections ke andar ke saare elements ko visit karta hai
-      if (section.getBoundingClientRect().top < trigger) {
-        section.classList.add('visible');
-      }
-      //section.getBoundingClientRect().top is the Distance from the top of the viewport to the top of the section.
-      //If this value is less than the trigger line, it means the section has moved far enough into view to be revealed.
-    });
-  }
-
-  /*top se 85% of vh ek line hai, agar use cross karega to visible hoga,
-  i.e. agar section ke top ki height top se 85% wali height se choti hai tab
-  that means usne cross kar liya hai to use iss condition ko check karke visible bana denge*/
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // run once on load
-</script>
-
+  <script>
+    const sections = document.querySelectorAll('section');
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
 </body>
 </html>
-
-<!--getBoundingClientRect() JavaScript ka built-in DOM method hai jo tumhe kisi element ka size aur uski position deta hai viewport ke respect me.-->
