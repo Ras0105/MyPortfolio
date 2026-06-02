@@ -5,7 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rasshi Ashish Srivastav — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portf.css">
+  <style>
+    /* General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      background: #6C63FF;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 30px 0;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 15px 0 5px;
+      color: #6C63FF;
+      font-size: 2rem;
+    }
+    p.subtitle {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    /* Section */
+    section {
+      background: #fff;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #6C63FF;
+      margin-bottom: 15px;
+      border-left: 5px solid #6C63FF;
+      padding-left: 10px;
+    }
+
+    /* Skills & Projects Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #fdfdfd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Links */
+    a {
+      color: #6C63FF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -35,8 +148,8 @@
       <h2>Skills</h2>
       <div class="card-grid">
         <div class="card"><strong>Technical Skills:</strong> Tailwind CSS, JavaScript, C, C++, Git/GitHub</div>
-        <div class="card"><strong>Tools:</strong> Canva, Adobe Express</div>
-        <div class="card"><strong>Soft Skills:</strong> Teamwork, Team Management, Problem-Solving, Time Management, Adaptability, Pressure Handling</div>
+        <div class="card"><strong>Tools:</strong> Canva</div>
+        <div class="card"><strong>Soft Skills:</strong> Teamwork, Problem-Solving, Time Management, Adaptability, Pressure Handling</div>
         <div class="card"><strong>Interests:</strong> Cybersecurity, AI/ML</div>
       </div>
     </section>
@@ -47,7 +160,7 @@
         <div class="card"><strong>My Personal Study Space</strong> — Personalized learning dashboard for students (HTML, CSS) — <a href="https://github.com/Ras0105/project" target="_blank">Code</a> | <a href="https://ras0105.github.io/project/project.html" target="_blank">Live</a></div>
         <div class="card"><strong>HackBlitz'25 EdTech Platform</strong> — Interactive online learning platform (HTML, CSS, JS) — <a href="https://github.com/Ras0105/hackblitz" target="_blank">Code</a> | <a href="https://ras0105.github.io/hackblitz/home.html" target="_blank">Live</a></div>
         <div class="card"><strong>Netflix Clone</strong> — Streaming service UI clone (HTML, CSS, JS) — <a href="https://github.com/Ras0105/Netflix-Clone" target="_blank">Code</a> | <a href="https://ras0105.github.io/Netflix-Clone/netflix.html" target="_blank">Live</a></div>
-        <div class="card"><strong>ByteBurst'25 Mess Management Tool</strong> — Mess Management Tool — <a href="https://github.com/Ras0105/ByteBurst-25" target="_blank">Code</a> | <a href="https://ras0105.github.io/ByteBurst-25/mess.html" target="_blank">Live</a></div>
+        <div class="card"><strong>ByteBurst'25 Mess Management Tool</strong> — Web-based mess management tool — <a href="https://github.com/Ras0105/ByteBurst-25" target="_blank">Code</a> | <a href="https://ras0105.github.io/ByteBurst-25/mess.html" target="_blank">Live</a></div>
         <div class="card"><strong>Faulty Calculator</strong> — 50% faulty calculator — <a href="https://github.com/Ras0105/FaultyCal" target="_blank">Code</a> | <a href="https://ras0105.github.io/FaultyCal/FaultyCal.html" target="_blank">Live</a></div>
         <div class="card"><strong>My Portfolio</strong> — Personal portfolio site — <a href="https://github.com/Ras0105/Portfolio" target="_blank">Code</a> | <a href="https://ras0105.github.io/Portfolio/port.html" target="_blank">Live</a></div>
       </div>
@@ -86,15 +199,15 @@
   </div>
 
   <script>
+    // Reveal on scroll effect
     const sections = document.querySelectorAll('section');
-    function revealOnScroll() {
-      const trigger = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        if (section.getBoundingClientRect().top < trigger) {
-          section.classList.add('visible');
-        }
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < triggerBottom) sec.classList.add('visible');
       });
-    }
+    };
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
   </script>
