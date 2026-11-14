@@ -62,3 +62,32 @@
       if (!saved) apply(e.matches ? 'dark' : 'light');
     });
   })();
+
+
+  // Back to top: appears after scrolling, ring shows page progress
+  (function(){
+    const btn = document.getElementById('toTop');
+    if (!btn) return;
+    const ring = btn.querySelector('.ring circle');
+    const CIRC = 125.66;
+    let ticking = false;
+
+    function update(){
+      const y = window.scrollY || document.documentElement.scrollTop;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(y / max, 1) : 0;
+      ring.style.strokeDashoffset = CIRC * (1 - progress);
+      btn.classList.toggle('show', y > 500);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking){ requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
