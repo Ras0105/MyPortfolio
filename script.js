@@ -31,3 +31,34 @@
   }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
 
   navMap.forEach((_, target) => navIo.observe(target));
+
+
+  // Theme toggle (dark / light)
+  (function(){
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    if (!btn) return;
+
+    function apply(theme){
+      root.setAttribute('data-theme', theme);
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+    apply(root.getAttribute('data-theme') || 'light');
+
+    // enable smooth transitions only after first paint
+    requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('theme-anim')));
+
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('theme', next); } catch(e) {}
+    });
+
+    // follow system changes if the visitor hasn't chosen manually
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    mq.addEventListener && mq.addEventListener('change', e => {
+      let saved = null;
+      try { saved = localStorage.getItem('theme'); } catch(err) {}
+      if (!saved) apply(e.matches ? 'dark' : 'light');
+    });
+  })();

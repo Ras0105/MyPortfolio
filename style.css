@@ -48,6 +48,68 @@
     color: var(--ink-mute);
   }
 
+
+  /* ---------- Dark theme ---------- */
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg: #0d1117;
+    --surface: #151b23;
+    --ink: #e8eaee;
+    --ink-soft: #b3bac5;
+    --ink-mute: #8b93a1;
+    --line: #262d38;
+    --accent: #7db4e8;
+    --accent-soft: #172638;
+    --tag: #7fcfb0;
+    --tag-soft: #13271f;
+    --amber: #e2b872;
+    --amber-soft: #2a2417;
+  }
+  :root[data-theme="dark"] .project-card:hover{ box-shadow: 0 8px 28px rgba(0,0,0,.35); }
+  :root[data-theme="dark"] nav.sidenav a .idx{ color: #3a4350; }
+  :root[data-theme="dark"] nav.sidenav a:hover .idx,
+  :root[data-theme="dark"] nav.sidenav a.active .idx{ color: var(--accent); }
+  :root[data-theme="dark"] .skill-tags span{ background: var(--surface); }
+
+  /* Node motif follows the accent colour */
+  .node-motif{ color: var(--accent); }
+
+  /* Smooth theme switch (enabled by script after first paint) */
+  html.theme-anim body,
+  html.theme-anim .sidebar,
+  html.theme-anim section,
+  html.theme-anim .project-card,
+  html.theme-anim .oss-card,
+  html.theme-anim .skill-tags span,
+  html.theme-anim .resume-btn{
+    transition: background-color .35s ease, color .35s ease, border-color .35s ease, opacity .5s ease, transform .5s ease;
+  }
+
+  /* ---------- Theme toggle ---------- */
+  .theme-toggle{
+    position: fixed;
+    top: 1.1rem;
+    right: 1.3rem;
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color .18s ease, color .18s ease, background-color .35s ease;
+  }
+  .theme-toggle:hover{ border-color: var(--accent); color: var(--accent); }
+  .theme-toggle:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+  .theme-toggle svg{ width: 18px; height: 18px; }
+  .theme-toggle .icon-sun{ display: none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun{ display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon{ display: none; }
+
   /* ---------- Layout shell ---------- */
   .shell{
     display: flex;
