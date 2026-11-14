@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Rasshi Ashish Srivastav — Backend &amp; Systems Developer</title>
-<meta name="description" content="Portfolio of Rasshi Ashish Srivastav — IT undergraduate building backend systems, databases, and data structures." />
+<meta name="description" content="Portfolio of Rasshi Ashish Srivastav — backend developer who cares about what happens after you hit submit. IT undergraduate building APIs, databases, and data structures." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -77,9 +77,8 @@
     <div class="content">
 
       <section id="hero">
-        <!-- <h2 class="hero-title">I care about what happens after you hit submit.</h2> -->
-        <h2 class="hero-title">I build the parts of software that hold data, not the parts that show it off.</h2>
-        <p class="hero-lede">I'm an Information Technology undergraduate at MMMUT Gorakhpur, spending most of my time on backend logic, database design, and competitive programming. I lead the web team at my college's Drone &amp; IoT Club, and I'm currently contributing to open source through GSSoC 2026.</p>
+        <h2 class="hero-title">Backend developer.<br>I care about what happens after you hit submit.</h2>
+        <p class="hero-lede">I'm an Information Technology undergraduate at MMMUT Gorakhpur, working on APIs, database design, and competitive programming. I lead the web team at my college's Drone &amp; IoT Club, and I'm currently contributing to open source through GSSoC 2026.</p>
         <div class="hero-meta">
           <span><i class="dot"></i>Gorakhpur, India</span>
           <span><i class="dot"></i>B.Tech IT, 2024–2028</span>
@@ -90,7 +89,7 @@
       <section id="about">
         <div class="sec-head"><span class="label">01</span><h2>About</h2><span class="rule"></span></div>
         <p>My interest in computers started in childhood, from playing games and exploring folders with my brother on my father's computer as a kid to wondering how a click turns into a webpage. That curiosity became something concrete in 9th grade, when Java turned it into something I could actually build instead of just wonder about.</p>
-        <p>These days that curiosity shows up as leading the web development team at MMMUT's Drone &amp; IoT Club, running DSA sessions for Google Developer Groups on campus, and turning ideas into working projects rather than just talking about them. I'm an active competitive programmer on Codeforces and CodeChef, an Executive Member for DSA/CP at GDG MMMUT, and I'm currently contributing to open source through GSSoC 2026 — curiosity, consistency, and being okay with not knowing things yet are pretty much how I approach all of it.</p>
+        <p>These days that curiosity shows up as leading the web development team at MMMUT's Drone &amp; IoT Club, running DSA sessions for Google Developer Groups on campus, and turning ideas into working projects rather than just talking about them. I'm an active competitive programmer on Codeforces and CodeChef, a DSA/CP Mentor at GDG MMMUT, and I'm currently contributing to open source through GSSoC 2026 — curiosity, consistency, and being okay with not knowing things yet are pretty much how I approach all of it.</p>
       </section>
 
       <section id="skills">
@@ -102,19 +101,19 @@
           </div>
           <div class="skill-group">
             <span class="label">Databases</span>
-            <div class="skill-tags"><span>MySQL</span><span>MongoDB</span></div>
+            <div class="skill-tags"><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>SQLite</span></div>
           </div>
           <div class="skill-group">
             <span class="label">Frameworks</span>
-            <div class="skill-tags"><span>Django</span><span>FastAPI</span></div>
+            <div class="skill-tags"><span>FastAPI</span><span>Django</span><span>Node.js</span><span>Express.js</span></div>
           </div>
           <div class="skill-group">
             <span class="label">Frontend</span>
-            <div class="skill-tags"><span>HTML</span><span>CSS</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Swiper.js</span></div>
+            <div class="skill-tags"><span>React.js</span><span>HTML</span><span>CSS</span><span>Tailwind CSS</span><span>Bootstrap</span><span>Swiper.js</span></div>
           </div>
           <div class="skill-group">
             <span class="label">Tools &amp; Platforms</span>
-            <div class="skill-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Vite</span><span>Vercel</span><span>Railway</span><span>Render</span></div>
+            <div class="skill-tags"><span>Git</span><span>GitHub</span><span>Docker</span><span>GitHub Actions</span><span>pytest</span><span>Alembic</span><span>Playwright</span><span>Vite</span><span>Vercel</span><span>Railway</span><span>Render</span></div>
           </div>
           <div class="skill-group">
             <span class="label">Fundamentals</span>
@@ -129,13 +128,25 @@
 
           <div class="project-card">
             <div class="project-top">
+              <span class="project-name">SlotBook</span>
+              <div class="project-links">
+                <a href="https://github.com/Ras0105/SlotBook" target="_blank" rel="noopener">Code</a>
+                <a href="https://slot-book-six.vercel.app/" target="_blank" rel="noopener">Live</a>
+              </div>
+            </div>
+            <p class="project-desc">A full-stack appointment booking platform with JWT authentication, Argon2 password hashing, customer/provider/admin roles, working hours, time-off blocks and an admin statistics dashboard. Double-bookings are prevented under concurrent requests using row locking and a PostgreSQL exclusion constraint (409 Conflict on clashes). Backed by 170+ pytest tests on real PostgreSQL, Alembic migrations and Docker Compose.</p>
+            <div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>Docker</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
               <span class="project-name">Biodata Builder</span>
               <div class="project-links">
                 <a href="https://biodata-builder-omega.vercel.app/" target="_blank" rel="noopener">Live</a>
               </div>
             </div>
-            <p class="project-desc">A template-based biodata builder for creating professional, print-ready biodata documents — pick a template, fill in details, and get a live preview with instant PDF export. Built with a FastAPI backend and a modern frontend, with the frontend deployed on Vercel and the backend on Railway.</p>
-            <div class="project-tags"><span>FastAPI</span><span>PDF Export</span><span>Vercel</span></div>
+            <p class="project-desc">A template-based biodata builder with 29 templates, live preview and print-ready PDF export (Playwright + Node.js, matching the preview). Payments run through Razorpay with HMAC-SHA256 webhook verification, and PDFs are delivered via S3-compatible storage and SendGrid. FastAPI + PostgreSQL backend on Railway, frontend on Vercel.</p>
+            <div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Razorpay</span><span>Playwright</span></div>
           </div>
 
           <div class="project-card">
@@ -157,8 +168,8 @@
                 <a href="https://resume-builder-nu-sable.vercel.app/" target="_blank" rel="noopener">Live</a>
               </div>
             </div>
-            <p class="project-desc">A full-stack resume builder with a FastAPI backend and an HTML/CSS/JS frontend. REST endpoints handle resume data input and dynamic PDF generation, and the payment and file-delivery flow runs on FastAPI, PostgreSQL, and Razorpay webhooks — deployed on Vercel with environment-based configuration.</p>
-            <div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Razorpay</span></div>
+            <p class="project-desc">A full-stack resume builder with a FastAPI backend and an HTML/CSS/JS frontend. REST endpoints handle order management, Razorpay webhook payment verification and dynamic PDF generation (Jinja2 + Playwright), with S3-compatible storage and SendGrid email delivery of the final file. GitHub Actions CI runs the pytest suite on every push and pull request.</p>
+            <div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Razorpay</span><span>GitHub Actions</span></div>
           </div>
 
           <div class="project-card">
@@ -193,7 +204,7 @@
 
           <div class="more-row">
             <span class="m-name">ShopSphereDB</span>
-            <span class="m-desc">An 11-table normalized MySQL schema for an e-commerce system — orders, inventory, payments, and shipping, with ER diagrams and analytics queries.</span>
+            <span class="m-desc">A normalized 12-table MySQL schema for e-commerce — orders, inventory, payments, shipping, reviews and refunds — with 8 views, 4 triggers, 4 stored procedures, rollback-safe transactions and analytics queries.</span>
             <span class="m-links"><a href="https://github.com/Ras0105/ShopSphereDB" target="_blank" rel="noopener">Code</a></span>
           </div>
 
@@ -264,14 +275,15 @@
         <div class="xp-item">
           <div class="xp-top">
             <div>
-              <div class="xp-role">Software Developer Intern</div>
-              <div class="xp-org">Contract project — Biodata Builder</div>
+              <div class="xp-role">Freelance Software Developer</div>
+              <div class="xp-org">Aananda Creations, Gorakhpur — Contract: Biodata Builder</div>
             </div>
             <div class="xp-time">Jun 2026 — Aug 2026</div>
           </div>
           <ul>
-            <li>Built a template-based biodata builder web application using FastAPI and modern frontend tools, with live preview and print-ready PDF export.</li>
-            <li>Deployed the frontend on Vercel and the backend on Railway for production use.</li>
+            <li>Built, as sole developer, a biodata builder (FastAPI, PostgreSQL) with 29 templates, deployed on Vercel and Railway.</li>
+            <li>Automated print-ready PDF export with Playwright and Node.js so PDFs match the live preview.</li>
+            <li>Integrated Razorpay with HMAC-SHA256 webhook verification; delivered PDFs via S3-compatible storage and SendGrid.</li>
           </ul>
           <div class="project-links" style="margin-top:0.6rem;">
             <a href="https://biodata-builder-omega.vercel.app/" target="_blank" rel="noopener">Live</a>
@@ -289,7 +301,9 @@
           <ul>
             <li>Led the web development team and built the club's official website.</li>
             <li>Mentored junior developers, delegating tasks and managing Git-based collaboration and delivery.</li>
-            <li>Coordinated technical events, including SWIFTWINGS, ensuring smooth execution and student management.</li>
+            <li>Led the web and backend team for Orbitra’26 (CubeSat Mission Control Challenge, ~50 teams, 150+ participants); personally built registration with validation and confirmation emails, a DB-backed leaderboard with scores API, and an admin marks-upload panel for all rounds.</li>
+            <li>On event day, led the coding table and dashboard inspection, judging CubeSats and telemetry dashboards and troubleshooting students’ ESP32 and dashboard issues live.</li>
+            <li>Coordinated technical events, including SWIFTWINGS, managing logistics and student participation.</li>
           </ul>
           <div class="project-links" style="margin-top:0.6rem;">
             <a href="https://github.com/DIoT-MMMUT/official-diot-website" target="_blank" rel="noopener">Code</a>
@@ -300,22 +314,23 @@
         <div class="xp-item">
           <div class="xp-top">
             <div>
-              <div class="xp-role">Executive Member — DSA / Competitive Programming</div>
+              <div class="xp-role">DSA / CP Mentor</div>
               <div class="xp-org">Google Developer Groups (GDG) On Campus, MMMUT</div>
             </div>
             <div class="xp-time">Sep 2025 — Present</div>
           </div>
           <ul>
-            <li>Run regular Data Structures and competitive programming practice sessions with peers.</li>
-            <li>Participate in Google Cloud Study Jams and collaborative peer-learning initiatives.</li>
-            <li>Help organize technical workshops and coding events for the campus developer community.</li>
+            <li>Mentored DSA and competitive programming practice sessions and contests for 800+ participants.</li>
+            <li>Co-organized technical workshops, hackathons and Google Cloud Study Jams, driving peer learning on campus.</li>
           </ul>
         </div>
 
         <div class="xp-item">
           <div class="label" style="margin-bottom:0.9rem;">Achievements</div>
           <div class="ach-list">
-            <div class="ach-item"><span class="marker">→</span><p>Selected as an Open Source Contributor for GirlScript Summer of Code (GSSoC) 2026, contributing to open-source projects through collaborative development. (<a href="https://gssoc.girlscript.org/profile/cae46712-7b66-440e-9ef8-d6d5fac77280" target="_blank" rel="noopener" style="color:var(--accent)">View GSSoC profile</a>)</p></div>
+            <div class="ach-item"><span class="marker">→</span><p>Selected as an Open Source Contributor for GirlScript Summer of Code (GSSoC) 2026, with 50+ PRs merged across open-source web projects and personal projects. (<a href="https://gssoc.girlscript.org/profile/cae46712-7b66-440e-9ef8-d6d5fac77280" target="_blank" rel="noopener" style="color:var(--accent)">View GSSoC profile</a>)</p></div>
+            <div class="ach-item"><span class="marker">→</span><p>NIELIT — Full Stack Development using MERN (Grade S, 85%+), 60 hrs, Aug 2026.</p></div>
+            <div class="ach-item"><span class="marker">→</span><p>Smart India Hackathon (SIH): team ranked 13th across the entire college (MMMUT) in the internal round.</p></div>
             <div class="ach-item"><span class="marker">→</span><p>4th place, Syntax Siege (DSA/CP contest) · 2nd place, Ab Initio (TechSrijan) · 1st place, Don-de-paperica (Abhyudaya) — all at MMMUT.</p></div>
             <div class="ach-item"><span class="marker">→</span><p>Active on Codeforces (<a href="https://codeforces.com/profile/rasshi_IT" target="_blank" rel="noopener" style="color:var(--accent)">codeforces.com/profile/rasshi_IT</a>) and CodeChef (<a href="https://www.codechef.com/users/rasshi0105" target="_blank" rel="noopener" style="color:var(--accent)">codechef.com/users/rasshi0105</a>).</p></div>
           </div>
@@ -327,7 +342,7 @@
         <div class="edu-row">
           <div>
             <div class="edu-school">Madan Mohan Malviya University of Technology, Gorakhpur</div>
-            <div class="edu-detail">Bachelor of Technology (B.Tech), Information Technology — CGPA 8.09</div>
+            <div class="edu-detail">Bachelor of Technology (B.Tech), Information Technology — CGPA 8.10</div>
           </div>
           <div class="edu-time">2024 — 2028</div>
         </div>
